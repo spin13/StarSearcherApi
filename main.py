@@ -31,6 +31,7 @@ def star_position(name):
     return json.dumps({
         'altitude': str(computed_star.alt),
         'azimuth': str(computed_star.az),
+        'magnitude': str(computed_star.mag),
         'time': date.strftime('%Y/%m/%d %H:%M:%S')
     })
 
@@ -61,6 +62,7 @@ def stars_position(names):
         ret[name] = {
             'altitude': str(computed_star.alt),
             'azimuth': str(computed_star.az),
+            'magnitude': str(computed_star.mag),
             'time': date.strftime('%Y/%m/%d %H:%M:%S')
         }
     return json.dumps(ret)
